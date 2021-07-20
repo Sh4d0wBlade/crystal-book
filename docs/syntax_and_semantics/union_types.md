@@ -84,7 +84,7 @@ t1 = {1, "hi"}   # Tuple(Int32, String)
 t2 = {true, nil} # Tuple(Bool, Nil)
 
 t3 = rand < 0.5 ? t1 : t2
-typeof(t3) # Tuple(Int32 | Bool, String | Nil)
+typeof(t3) # Tuple(Bool | Int32, String | Nil)
 ```
 
 ### Union of named tuples with the same keys
@@ -98,5 +98,5 @@ t1 = {x: 1, y: "hi"}   # Tuple(x: Int32, y: String)
 t2 = {y: true, x: nil} # Tuple(y: Bool, x: Nil)
 
 t3 = rand < 0.5 ? t1 : t2
-typeof(t3) # NamedTuple(x: Int32 | Nil, y: String | Bool)
+typeof(t3) # NamedTuple(x: Int32 | Nil, y: Bool | String)
 ```
